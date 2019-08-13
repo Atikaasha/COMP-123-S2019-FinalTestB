@@ -16,5 +16,10 @@ namespace COMP_123_S2019_FinalTestB.Views
         {
             InitializeComponent();
         }
+
+        private void MasterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
