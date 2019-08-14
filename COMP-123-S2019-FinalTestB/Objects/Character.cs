@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/*
+ * STUDENT NAME: Chowdhury Atika Parvin
+ * STUDENT ID: 301007336
 
+ */
 /*STUDENT NAME:
  * STUDENT ID:
  * DESCRIPTION: This is the character class used in character creation.
                 This is also the Data container for the application.
- */ 
+ */
 
 namespace COMP_123_S2019_FinalTestB.Objects
 
 {
     public class Character
-    {  //character Abilities
+    {   // names
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        //character Abilities
         public string Strength { get; set; }
         public string Dexterity { get; set; }
         public string Constitution { get; set; }

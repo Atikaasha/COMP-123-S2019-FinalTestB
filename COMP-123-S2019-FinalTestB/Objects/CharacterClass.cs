@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/*
+ * STUDENT NAME: Chowdhury Atika Parvin
+ * STUDENT ID: 301007336
+ * DESCRIPTION: This is the main form for the application
+ */
 
 namespace COMP_123_S2019_FinalTestB.Objects
 {
@@ -21,4 +26,6 @@ namespace COMP_123_S2019_FinalTestB.Objects
         SORCEROR,
         DRUID
     }
+
+
 }

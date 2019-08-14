@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*STUDENT NAME:
- * STUDENT ID:
+/*STUDENT NAME:Atika
+ * STUDENT ID:301007336
  * DESCRIPTION: This is the Item Class.
                 Used for Inventory Management.
  */

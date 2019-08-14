@@ -38,7 +38,7 @@
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.LastNameLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.FirstNameDataLabel = new System.Windows.Forms.Label();
             this.LastNameDataLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.AbilityPage = new System.Windows.Forms.TabPage();
@@ -81,14 +81,32 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InventoryTableLayOutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.HeaderLabel = new System.Windows.Forms.Label();
+            this.Inventory1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.GenerateInventoryButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.FirstLabel = new System.Windows.Forms.Label();
+            this.SecondName = new System.Windows.Forms.Label();
+            this.AbilityLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.IntelligenceLabel = new System.Windows.Forms.Label();
+            this.WisdomLabel = new System.Windows.Forms.Label();
+            this.CharismaLabel = new System.Windows.Forms.Label();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.IdentityTableLayoutPanel.SuspendLayout();
             this.AbilityPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.InventoryPage.SuspendLayout();
             this.CharactersheetPage.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
+            this.InventoryTableLayOutPanel.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackButton
@@ -145,7 +163,7 @@
             this.IdentityTableLayoutPanel.Controls.Add(this.CharacterNameLabel, 0, 0);
             this.IdentityTableLayoutPanel.Controls.Add(this.FirstNameLabel, 0, 1);
             this.IdentityTableLayoutPanel.Controls.Add(this.LastNameLabel, 0, 2);
-            this.IdentityTableLayoutPanel.Controls.Add(this.label1, 1, 1);
+            this.IdentityTableLayoutPanel.Controls.Add(this.FirstNameDataLabel, 1, 1);
             this.IdentityTableLayoutPanel.Controls.Add(this.LastNameDataLabel, 1, 2);
             this.IdentityTableLayoutPanel.Controls.Add(this.textBox1, 1, 0);
             this.IdentityTableLayoutPanel.Location = new System.Drawing.Point(3, 0);
@@ -171,6 +189,7 @@
             this.GenerateName.TabIndex = 4;
             this.GenerateName.Text = "Generate Name";
             this.GenerateName.UseVisualStyleBackColor = true;
+            this.GenerateName.Click += new System.EventHandler(this.GenerateName_Click);
             // 
             // CharacterNameLabel
             // 
@@ -211,14 +230,14 @@
             this.LastNameLabel.Text = "LastName";
             this.LastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // FirstNameDataLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.IdentityTableLayoutPanel.SetColumnSpan(this.label1, 3);
-            this.label1.Location = new System.Drawing.Point(260, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(593, 64);
-            this.label1.TabIndex = 7;
+            this.FirstNameDataLabel.BackColor = System.Drawing.Color.LightGray;
+            this.IdentityTableLayoutPanel.SetColumnSpan(this.FirstNameDataLabel, 3);
+            this.FirstNameDataLabel.Location = new System.Drawing.Point(260, 64);
+            this.FirstNameDataLabel.Name = "FirstNameDataLabel";
+            this.FirstNameDataLabel.Size = new System.Drawing.Size(593, 64);
+            this.FirstNameDataLabel.TabIndex = 7;
             // 
             // LastNameDataLabel
             // 
@@ -393,9 +412,12 @@
             this.GenerateAbilitiesButton.TabIndex = 16;
             this.GenerateAbilitiesButton.Text = "Generate Abilities";
             this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
+            this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
             // 
             // InventoryPage
             // 
+            this.InventoryPage.Controls.Add(this.HeaderLabel);
+            this.InventoryPage.Controls.Add(this.InventoryTableLayOutPanel);
             this.InventoryPage.Location = new System.Drawing.Point(4, 41);
             this.InventoryPage.Name = "InventoryPage";
             this.InventoryPage.Padding = new System.Windows.Forms.Padding(3);
@@ -406,6 +428,7 @@
             // 
             // CharactersheetPage
             // 
+            this.CharactersheetPage.Controls.Add(this.tableLayoutPanel2);
             this.CharactersheetPage.Controls.Add(this.MainToolStrip);
             this.CharactersheetPage.Controls.Add(this.MainMenuStrip);
             this.CharactersheetPage.Location = new System.Drawing.Point(4, 41);
@@ -603,6 +626,173 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // InventoryTableLayOutPanel
+            // 
+            this.InventoryTableLayOutPanel.ColumnCount = 4;
+            this.InventoryTableLayOutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.Controls.Add(this.Inventory1, 0, 0);
+            this.InventoryTableLayOutPanel.Controls.Add(this.label4, 0, 1);
+            this.InventoryTableLayOutPanel.Controls.Add(this.label7, 0, 2);
+            this.InventoryTableLayOutPanel.Controls.Add(this.label3, 0, 3);
+            this.InventoryTableLayOutPanel.Controls.Add(this.GenerateInventoryButton, 3, 3);
+            this.InventoryTableLayOutPanel.Location = new System.Drawing.Point(90, 85);
+            this.InventoryTableLayOutPanel.Name = "InventoryTableLayOutPanel";
+            this.InventoryTableLayOutPanel.RowCount = 4;
+            this.InventoryTableLayOutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.InventoryTableLayOutPanel.Size = new System.Drawing.Size(658, 236);
+            this.InventoryTableLayOutPanel.TabIndex = 0;
+            // 
+            // HeaderLabel
+            // 
+            this.HeaderLabel.Location = new System.Drawing.Point(104, 16);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(255, 43);
+            this.HeaderLabel.TabIndex = 1;
+            this.HeaderLabel.Text = "InventoryItems";
+            // 
+            // Inventory1
+            // 
+            this.Inventory1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventory1.Location = new System.Drawing.Point(3, 0);
+            this.Inventory1.Name = "Inventory1";
+            this.Inventory1.Size = new System.Drawing.Size(158, 53);
+            this.Inventory1.TabIndex = 0;
+            this.Inventory1.Text = "Inventory 4:";
+            this.Inventory1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 53);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Inventory 4:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 53);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Inventory 4:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 118);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 53);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Inventory 4:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // GenerateInventoryButton
+            // 
+            this.GenerateInventoryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GenerateInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenerateInventoryButton.Location = new System.Drawing.Point(495, 180);
+            this.GenerateInventoryButton.Name = "GenerateInventoryButton";
+            this.GenerateInventoryButton.Size = new System.Drawing.Size(160, 53);
+            this.GenerateInventoryButton.TabIndex = 4;
+            this.GenerateInventoryButton.Text = "Generate Inventory";
+            this.GenerateInventoryButton.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.FirstLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.SecondName, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.AbilityLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.WisdomLabel, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.IntelligenceLabel, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CharismaLabel, 2, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(51, 99);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(728, 199);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // FirstLabel
+            // 
+            this.FirstLabel.Location = new System.Drawing.Point(3, 0);
+            this.FirstLabel.Name = "FirstLabel";
+            this.FirstLabel.Size = new System.Drawing.Size(176, 48);
+            this.FirstLabel.TabIndex = 0;
+            this.FirstLabel.Text = "FirstName";
+            // 
+            // SecondName
+            // 
+            this.SecondName.Location = new System.Drawing.Point(3, 49);
+            this.SecondName.Name = "SecondName";
+            this.SecondName.Size = new System.Drawing.Size(176, 48);
+            this.SecondName.TabIndex = 1;
+            this.SecondName.Text = "SecondName";
+            // 
+            // AbilityLabel
+            // 
+            this.AbilityLabel.Location = new System.Drawing.Point(3, 98);
+            this.AbilityLabel.Name = "AbilityLabel";
+            this.AbilityLabel.Size = new System.Drawing.Size(176, 48);
+            this.AbilityLabel.TabIndex = 2;
+            this.AbilityLabel.Text = "Dextarity";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 39);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Constitution";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // IntelligenceLabel
+            // 
+            this.IntelligenceLabel.Location = new System.Drawing.Point(367, 0);
+            this.IntelligenceLabel.Name = "IntelligenceLabel";
+            this.IntelligenceLabel.Size = new System.Drawing.Size(176, 39);
+            this.IntelligenceLabel.TabIndex = 10;
+            this.IntelligenceLabel.Text = "Intelligence";
+            this.IntelligenceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // WisdomLabel
+            // 
+            this.WisdomLabel.Location = new System.Drawing.Point(367, 49);
+            this.WisdomLabel.Name = "WisdomLabel";
+            this.WisdomLabel.Size = new System.Drawing.Size(176, 39);
+            this.WisdomLabel.TabIndex = 11;
+            this.WisdomLabel.Text = "Wisdom";
+            this.WisdomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CharismaLabel
+            // 
+            this.CharismaLabel.Location = new System.Drawing.Point(367, 98);
+            this.CharismaLabel.Name = "CharismaLabel";
+            this.CharismaLabel.Size = new System.Drawing.Size(176, 39);
+            this.CharismaLabel.TabIndex = 12;
+            this.CharismaLabel.Text = "CharismaLabel";
+            this.CharismaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // CharacterGeneretorForm
             // 
             this.ClientSize = new System.Drawing.Size(894, 544);
@@ -618,12 +808,15 @@
             this.IdentityTableLayoutPanel.PerformLayout();
             this.AbilityPage.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.InventoryPage.ResumeLayout(false);
             this.CharactersheetPage.ResumeLayout(false);
             this.CharactersheetPage.PerformLayout();
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
+            this.InventoryTableLayOutPanel.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -643,7 +836,7 @@
         private System.Windows.Forms.Label CharacterNameLabel;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label LastNameLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label FirstNameDataLabel;
         private System.Windows.Forms.Label LastNameDataLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
@@ -682,5 +875,20 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Label HeaderLabel;
+        private System.Windows.Forms.TableLayoutPanel InventoryTableLayOutPanel;
+        private System.Windows.Forms.Label Inventory1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button GenerateInventoryButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label FirstLabel;
+        private System.Windows.Forms.Label SecondName;
+        private System.Windows.Forms.Label AbilityLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label WisdomLabel;
+        private System.Windows.Forms.Label IntelligenceLabel;
+        private System.Windows.Forms.Label CharismaLabel;
     }
 }
